@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rulelist>
+    <category topic='BloodVessel'>
+        <rule>
+	        <premise truth='1,-1'>BloodVesselMuscle</premise>
+	        <conclusion truth='-1,1'>BloodVesselVolume</conclusion>
+        </rule>
+        <rule>
+            <premise truth='1,-1'>BloodVesselVolume</premise>
+            <conclusion truth='-1,1'>BloodVesselPressure</conclusion>
+        </rule>
+        <rule>
+            <premise truth='1,-1'>BloodVesselPressure</premise>
+            <conclusion truth='1,-1'>BloodPressure</conclusion>
+        </rule>
+        <rule>
+            <premise truth='1,-1'>BloodVesselVolume</premise>
+            <conclusion truth='0.6,-0.4'>SympatheticReaction</conclusion>
+        </rule>
+    </category>
+    
+    <category topic='BetaReceptor'>
+        <rule>
+            <premise truth='1,-1'>CardiaticBeta1Receptor</premise>
+            <conclusion truth='1,-1'>HeartRate</conclusion>
+        </rule>
+    </category>
+    
+    <category topic='SympatheticReaction'>
+        <rule>
+            <premise truth='1,-1'>SympatheticReaction</premise>
+        	<conclusion truth='0.9,-0.9'>HeartRate</conclusion>
+        </rule>
+    </category>
+</rulelist>

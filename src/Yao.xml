@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<category name='beta'>
+    <action truth='1'>房室传导</action>
+    <subcategory name='beta1'>
+        <target name='心脏'>
+	        <action truth='1'>心率</action>
+	        <action truth='1'>心肌收缩力</action>
+	        <action truth='1'>心肌耗氧量</action>
+	        <action truth='1'>心排出量</action>
+        </target>
+    </subcategory>
+    <subcategory name='beta2'>
+        <target name='心脏'>
+            <action truth='1'>血管（舒张）</action>
+        </target>
+        <target name='支气管'>
+            <action truth='1'>支气管平滑肌</action>
+        </target>
+        <target name='肝'>
+            <action truth='1'>血糖</action>
+        </target>
+    </subcategory>
+</category>
+
+
+<category name='diuretic'>
+    <action truth='-1'>Na</action>
+    <action truth='-0.2'>K</action>
+    <action truth='-1'>Ca</action>
+</category>
+
+<category name='calcium tunnel blocker'>
+    <action truth='-1'>血管平滑肌</action>
+    <action truth='-1'>心肌耗氧量</action>
+    <action truth='-1'>心率</action>
+    <action truth='1'>冠状血管</action>
+    <action truth='-1'>血小板</action>
+    <action truth='-1'>支气管平滑肌</action>
+</category>
+
+
+<category name='ACE blocker'>
+    <action>血管（舒张）</action>
+    <action truth='-1'>钠</action>
+    <action truth='0.2'>K</action>
+</category>
+
+
+<disease name='哮喘'>
+    <treatment truth='-1'>支气管平滑肌</treatment>    
+</disease>
+
+<disease name='糖尿病'>
+    <treatment truth='-1'>血糖</treatment>
+</disease>
+
+<disease name='心律'>
+    <treatment truth='-1'>房室传导</treatment>
+</disease>
+
+
+
+<disease name='心绞痛/心肌梗死'>
+    <treatment truth='-1'>心肌耗氧量</treatment>
+    <treatment truth='1'>冠状血管</treatment>
+</disease>

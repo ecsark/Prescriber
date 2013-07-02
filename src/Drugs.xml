@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<druglist>
+    <category name='Diuretics'>
+        <action truth='-1'>SodiumIon</action>
+        <subcategory name='loop diuretics'>
+            <action truth='1'>RenalBloodFlow</action>
+            <benefit>CongestiveHeartFailure</benefit>
+            <drug name='bumetanide'></drug>
+        </subcategory>
+        <subcategory name='Thiazide diuretics'></subcategory>
+        <subcategory name='Thiazide-like diuretics'></subcategory>
+        <subcategory name='Potassium-sparing diuretics'></subcategory>
+    </category>
+    
+    <category name='Adrenergic receptor antagonists'>
+        <subcategory name='Beta blockers'>
+            <action description='block the the action of epinephrine and 
+                norepinephrine on β-adrenergic receptors' truth='-1'>BetaReceptor</action>
+            <action truth='-1'>SmoothMuscle</action>
+            <risk>Stroke</risk>
+            <drug name='propranolol' cname='普萘洛尔'>
+                <action truth='-1'>CardiacBeta1Receptor</action>
+                <benefit>Angina</benefit>
+                <benefit>Methacholine</benefit>
+            </drug>
+        </subcategory>
+        <subcategory name='Alpha blockers'></subcategory>
+        <subcategory name='Mixed Alpha + Beta blockers'></subcategory>
+    </category>
+    
+    <category name='Calcium Channel Blockers'>
+        <action description='block the entry of calcium into 
+            muscle cells in artery walls' truth='-1'>CalciumIon</action>
+        <subcategory name='dihydropyridines' cname='二氢吡啶类'>
+            <action truth='1'>BloodVesselMuscle->D</action>
+            <risk strength='4'>SympatheticReaction->U</risk>
+	        <drug name='nifedipine' cname='硝苯地平'>
+	            <generality>wide</generality>
+	            <benefit cname='心绞痛'>Angina</benefit>
+	            <benefit cname='糖尿病'>Diabetes</benefit>
+	            <benefit cname='哮喘'>Asthma</benefit>
+	            <benefit cname='肾病'>KidneyDisease</benefit>
+	        </drug>
+	        <drug name='Nitrendipine' cname='尼群地平' similar='Nifedipine'>
+	            <effect description='周围血管扩张'>
+	                BloodVesselVolume U
+	                <strength>8</strength>
+	            </effect>
+	        </drug>
+        </subcategory>
+        <subcategory name='non-dihydropyridines' cname='非二氢吡啶类'>
+            <action truth='-1'>BloodVesselMuscle</action>
+            <action truth='-1'>CardiacMuscle</action>
+            <drug name='diltiazem'></drug>
+            <drug name='verapamil'></drug>
+        </subcategory>
+        
+    </category>
+    
+    <category name='ACE inhibitors'>
+        <subcategory name='Beta blockers'></subcategory>
+        <subcategory name='Alpha blockers'></subcategory>
+        <subcategory name='Mixed Alpha + Beta blockers'></subcategory>
+    </category>
+</druglist>
